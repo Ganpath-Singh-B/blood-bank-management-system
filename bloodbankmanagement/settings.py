@@ -90,19 +90,20 @@ WSGI_APPLICATION = 'bloodbankmanagement.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME' : 'blood_bank_management_system',
-        'USER' : 'blood_bank_management_system_user',
-        'PASSWORD' : 'br2MxHfXt3H0Fi03oYYc9K1ZRUbfSekW',
-        'HOST' : 'dpg-cp2q0421hbls7382kc2g-a',
-        'PORT' : 5432
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME' : 'blood_bank_management_system',
+#         'USER' : 'blood_bank_management_system_user',
+#         'PASSWORD' : 'br2MxHfXt3H0Fi03oYYc9K1ZRUbfSekW',
+#         'HOST' : 'dpg-cp2q0421hbls7382kc2g-a',
+#         'PORT' : 5432
+#     }
+# }
 
 DATABASES = {
-    "default" : dj_database_url.parse("postgres://blood_bank_management_system_user:br2MxHfXt3H0Fi03oYYc9K1ZRUbfSekW@dpg-cp2q0421hbls7382kc2g-a/blood_bank_management_system")
+    # "default" : dj_database_url.parse("postgres://blood_bank_management_system_user:br2MxHfXt3H0Fi03oYYc9K1ZRUbfSekW@dpg-cp2q0421hbls7382kc2g-a/blood_bank_management_system")
+    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
 
 }
 
