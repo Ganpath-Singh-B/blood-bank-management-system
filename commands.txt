@@ -1,0 +1,12 @@
+http://127.0.0.1:8000/admin/ - access the db 
+
+python manage.py changepassword <username> for changing the password in superuser Django
+
+
+vishnu patient password vishnu@123 username - vishnu@123
+
+Ganpath Admin password - ganpath@123 username-Ganpath
+
+preetham patient password - preetham@123
+
+abc donor password : abc@123 username- akash
