@@ -90,20 +90,21 @@ WSGI_APPLICATION = 'bloodbankmanagement.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME' : 'postgres',
+#         'USER' : 'postgres',
+#         'PASSWORD' : 'postgres',
+#         'HOST' : 'dpg-cp2q0421hbls7382kc2g-a',
+#         'PORT' : 5432
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME' : 'postgres',
-        'USER' : 'postgres',
-        'PASSWORD' : 'postgres',
-        'HOST' : 'dpg-cp2q0421hbls7382kc2g-a',
-        'PORT' : 5432
-    }
+    "default" : dj_database_url.parse("postgres://blood_bank_management_system_user:br2MxHfXt3H0Fi03oYYc9K1ZRUbfSekW@dpg-cp2q0421hbls7382kc2g-a/blood_bank_management_system")
+
 }
-
-DATABASES["default"]= dj_database_url.parse("postgres://blood_bank_management_system_user:br2MxHfXt3H0Fi03oYYc9K1ZRUbfSekW@dpg-cp2q0421hbls7382kc2g-a/blood_bank_management_system")
-
-
 
 
 # Password validation
