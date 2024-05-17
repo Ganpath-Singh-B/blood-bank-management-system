@@ -83,12 +83,12 @@ WSGI_APPLICATION = 'bloodbankmanagement.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 
 DATABASES["default"]= dj_database_url.parse("postgres://blood_bank_management_system_user:br2MxHfXt3H0Fi03oYYc9K1ZRUbfSekW@dpg-cp2q0421hbls7382kc2g-a/blood_bank_management_system")
