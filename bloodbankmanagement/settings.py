@@ -113,7 +113,13 @@ DATABASES = {
     )
 }
 
+# Explicitly set the ENGINE to avoid any potential misconfiguration
+DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql'
 
+# Ensure the database connection uses UTC
+DATABASES['default']['OPTIONS'] = {
+    'options': '-c timezone=UTC'
+}
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
